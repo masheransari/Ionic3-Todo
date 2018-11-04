@@ -4,6 +4,8 @@
       TODO NEW
     </ion-title>
     <ion-buttons end>
+      <button (click)="toggleReorder()" ion-button *ngIf="!reorderIsEnable">Edit</button>
+      <button (click)="toggleReorder()" ion-button *ngIf="reorderIsEnable">Done</button>
       <button ion-button (click)="openTodoAlert()">
           <ion-icon name="add"></ion-icon>
       </button>
@@ -12,8 +14,8 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item-sliding *ngFor="let todo of todos" >
+  <ion-list [reorder]="reorderIsEnable" (ionItemReorder)="itemReordered($event)">
+    <ion-item-sliding *ngFor="let todo of todos">
       <ion-item>{{todo}}</ion-item>
       <ion-item-options side="right">
         <button color="danger" ion-button><ion-icon name="trash">

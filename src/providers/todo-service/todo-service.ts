@@ -22,6 +22,9 @@ export class TodoService {
     this.todo.splice(todoIndex, 1);
     this.archivedTodos.push(todoToBeArchived);
   }
+  getArchivedTodos(){
+    return this.archivedTodos;
+  }
 
   getTodos() {
     return this.todo;

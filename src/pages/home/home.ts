@@ -17,7 +17,7 @@ export class HomePage {
   }
 
   archiveTodo(todoIndex){
-this.todoService.archievedTodo(todoIndex);
+    this.todoService.archievedTodo(todoIndex);
   }
   goToArchivePage() {
     // console.log(this.archivedTodosPage);

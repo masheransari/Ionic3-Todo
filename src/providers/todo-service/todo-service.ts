@@ -22,7 +22,7 @@ export class TodoService {
     this.todo.splice(todoIndex, 1);
     this.archivedTodos.push(todoToBeArchived);
   }
-  getArchivedTodos(){
+  getArchivedTodos() {
     return this.archivedTodos;
   }
 
@@ -32,6 +32,10 @@ export class TodoService {
 
   addTodo(todoText) {
     this.todo.push(todoText);
+  }
+
+  editTodo(todoText, index) {
+    this.todo[index] = todoText;
   }
 
 }

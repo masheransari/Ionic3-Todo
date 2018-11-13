@@ -16,6 +16,12 @@
 <ion-content padding>
   <ion-list [reorder]="reorderIsEnable" (ionItemReorder)="itemReordered($event)">
     <ion-item-sliding *ngFor="let todo of todos; let todoIndex = index">
+      <ion-item-options side="left">
+        <button ion-button (click)="editTodoValue(todoIndex)">
+          <ion-icon name="create">
+            </ion-icon>
+          </button>
+      </ion-item-options>
       <ion-item>{{todo}}</ion-item>
       <ion-item-options side="right">
         <button color="danger" ion-button (click)="archiveTodo(todoIndex)">

@@ -16,9 +16,9 @@ import { TodoService } from '../../providers/todo-service/todo-service';
 })
 export class ArchivedTodosPage {
 
-  public archiveTodos=[];
+  public archiveTodos = [];
 
-  constructor(private todoService: TodoService,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private todoService: TodoService, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
